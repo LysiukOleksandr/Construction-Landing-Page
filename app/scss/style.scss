@@ -114,10 +114,16 @@ li {
 
 .title {
   @extend %title;
+  @media screen and(max-width:600px) {
+    @include text(24px, 400, 30px);
+  }
 }
 
 .subtitle {
   @extend %subtitle;
+  @media screen and(max-width:600px) {
+    @include text(16px, 400, 26px);
+  }
 }
 
 .secondary-title {
@@ -375,6 +381,22 @@ li {
 }
 
 //construction
+
+.construction {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+
+  &__image {
+    margin-top: 40px;
+    max-width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 
 // animations
 
