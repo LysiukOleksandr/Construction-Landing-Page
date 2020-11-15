@@ -858,6 +858,104 @@ li {
   }
 }
 
+// instruction
+
+.instruction {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    @media screen and(max-width:900px) {
+      align-items: center;
+    }
+    @media screen and(max-width:700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    margin-right: 20px;
+    @media screen and(max-width:700px) {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    @media screen and(max-width:700px) {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    max-width: 462px;
+    margin-top: 21px;
+    text-align: left;
+    @media screen and(max-width:700px) {
+      text-align: center;
+    }
+  }
+
+  &__img {
+    margin-top: 60px;
+    max-width: 336px;
+    max-height: 392px;
+    @media screen and(max-width:700px) {
+      margin: 20px auto 0 auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__list {
+    max-width: 450px;
+    margin-right: 10px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 52px;
+    margin-top: 30px;
+    &-count {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #dadedf;
+    }
+    &-title {
+      text-align: left;
+    }
+    &-description {
+      margin-top: 10px;
+      text-align: left;
+    }
+  }
+
+  &__buttons {
+    margin-top: 30px;
+    @media screen and(max-width:700px) {
+      text-align: center;
+    }
+  }
+
+  &__demo {
+    margin-right: 16px;
+  }
+
+  &__details {
+  }
+}
+
 // animations
 
 @keyframes button-dark {
