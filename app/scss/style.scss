@@ -951,8 +951,136 @@ li {
   &__demo {
     margin-right: 16px;
   }
+}
 
-  &__details {
+// reasons
+
+.reasons {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+  &__title {
+  }
+
+  &__subtitle {
+    max-width: 681px;
+    margin: 0 auto;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    @media screen and(max-width:820px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    max-width: 394px;
+    margin-top: 30px;
+    margin-right: 5px;
+  }
+
+  &__item {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  &__item-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__item-info {
+    margin-left: 16px;
+  }
+
+  &__item-title {
+    text-align: left;
+  }
+
+  &__item-description {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+.slider {
+  margin-top: 60px;
+  position: relative;
+  width: 614px;
+  height: 516px;
+  background-color: #f8f8f9;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  @media screen and(max-width:970px) {
+    height: 600px;
+  }
+  @media screen and(max-width:820px) {
+    height: 516px;
+  }
+  @media screen and(max-width:650px) {
+    display: none;
+  }
+  &__item {
+    background: url('../img/quotes.png') no-repeat 5% 5%;
+    position: absolute;
+    top: calc(50% - 40%);
+    left: calc(50% - 40%);
+    width: 80%;
+    height: 80%;
+    border: 1px solid;
+    &-content {
+    }
+
+    &-text {
+      @include text(30px, 400, 48px);
+    }
+
+    &-flex {
+      display: flex;
+      align-items: center;
+      margin-top: 28px;
+      padding-bottom: 20px;
+    }
+
+    &-info {
+      margin-left: 8px;
+    }
+
+    &-name {
+      @include text(16px, 400, 19.36px);
+    }
+
+    &-position {
+      @include text(16px, 400, 19.36px);
+      color: $secondary;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 10%;
+    bottom: 40px;
+    display: flex;
+    &-item {
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      background: $hover;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
   }
 }
 
