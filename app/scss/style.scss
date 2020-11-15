@@ -398,6 +398,82 @@ li {
   }
 }
 
+// order
+
+.order {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+  &__title {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  &__flex {
+    margin-top: 160px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and(max-width:900px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-top: 112px;
+    }
+    @media screen and(max-width:600px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__info {
+    margin-left: 20px;
+    @media screen and(max-width:900px) {
+      margin-left: 0;
+    }
+    &-title {
+      max-width: 489px;
+      @include text(32px, 400, 48px);
+      @media screen and(max-width:900px) {
+        text-align: center;
+        margin-top: 20px;
+      }
+      @media screen and(max-width:600px) {
+        @include text(24px, 400, 30px);
+      }
+    }
+
+    &-description {
+      margin: 16px 0 28px 0;
+      max-width: 542px;
+      @include text(20px, 400, 32px);
+      color: $secondary;
+      @media screen and(max-width:900px) {
+        text-align: center;
+      }
+      @media screen and(max-width:600px) {
+        @include text(18px, 400, 26px);
+      }
+    }
+
+    &-text {
+      @include text(20px, 400, 32px);
+      background: url('../img/yellow-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: 12px;
+      @media screen and(max-width:600px) {
+        @include text(16px, 400, 20px);
+      }
+    }
+  }
+  &__image {
+    max-width: 464px;
+    max-height: 400px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 // animations
 
 @keyframes button-dark {
