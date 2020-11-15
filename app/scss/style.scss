@@ -474,6 +474,30 @@ li {
     }
   }
 }
+
+// sponsors
+
+.sponsors {
+  padding-top: 71px;
+  @media screen and(max-width:600px) {
+    padding-top: 40px;
+  }
+  &__flex {
+    padding: 56px 0 56px 0;
+    border-top: 1px solid #eef2f3;
+    border-bottom: 1px solid #eef2f3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 180px;
+    height: 90px;
+    margin: 0 10px;
+  }
+}
+
 // animations
 
 @keyframes button-dark {
