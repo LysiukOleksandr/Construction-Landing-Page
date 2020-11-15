@@ -35,6 +35,11 @@ li {
 
 //basic-custom
 
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
 .button-dark {
   background: $main;
   width: 166px;
