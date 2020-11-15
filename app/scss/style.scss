@@ -560,6 +560,69 @@ li {
   }
 }
 
+// delivery
+
+.delivery {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+
+  &__subtitle {
+    max-width: 650px;
+    margin: 20px auto 0 auto;
+  }
+
+  &__flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    justify-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 55px;
+  }
+
+  &__item {
+    &-flex {
+      display: flex;
+    }
+
+    &-info {
+      max-width: 270px;
+      margin-left: 16px;
+    }
+
+    &-title {
+      @include text(18px, 400, 24px);
+    }
+
+    &-description {
+      @include text(16px, 400, 24px);
+      color: $secondary;
+    }
+  }
+
+  &__text {
+    margin-top: 22px;
+    text-align: center;
+    color: $secondary;
+    @include text(20px, 400, 32px);
+    @media screen and(max-width:600px) {
+      @include text(16px, 400, 20px);
+    }
+
+    span {
+      @media screen and(max-width:600px) {
+        @include text(16px, 400, 24px);
+      }
+      background: url('../img/yellow-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: 12px;
+    }
+  }
+}
+
 // animations
 
 @keyframes button-dark {
