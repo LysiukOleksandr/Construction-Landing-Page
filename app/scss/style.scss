@@ -112,6 +112,18 @@ li {
   }
 }
 
+.secondary-title {
+  @include text(18px, 400, 24px);
+  text-align: center;
+  padding: 0 5px;
+}
+.description {
+  @include text(16px, 400, 24px);
+  color: $secondary;
+  text-align: center;
+  padding: 0 5px;
+}
+
 // header
 .header {
   &__top {
@@ -195,6 +207,7 @@ li {
 
     &-burger {
       display: none;
+      margin-right: 10px;
       @media screen and(max-width:880px) {
         display: block;
       }
@@ -206,7 +219,7 @@ li {
       :nth-child(2),
       :nth-child(3) {
         position: absolute;
-        width: 20px;
+        width: 30px;
         height: 3px;
         background: black;
         transition: 0.7s all ease;
@@ -317,6 +330,43 @@ li {
     }
   }
 }
+
+.points {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+  &_img {
+    margin: 0 auto;
+    width: 48px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: center;
+    @media screen and(max-width:600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    margin: 0 5px;
+    @media screen and(max-width:600px) {
+      margin: 10px 0;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+}
+
+// animations
 
 @keyframes button-dark {
   0% {
