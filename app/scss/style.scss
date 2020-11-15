@@ -57,6 +57,17 @@ li {
   padding: 0 10px;
 }
 
+.button-dark,
+.button-light {
+  &:active {
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+  }
+}
+
 .button-dark {
   background: $main;
   width: 166px;
@@ -94,6 +105,10 @@ li {
     width: 130px;
     height: 40px;
     font-size: 16px;
+  }
+  &:hover {
+    background: #ffdd76;
+    border: 1px solid #ffdd76;
   }
 }
 
@@ -249,22 +264,56 @@ li {
   }
 
   &__content {
+    padding-top: 112px;
+    @media screen and(max-width:600px) {
+      padding-top: 50px;
+    }
     &-title {
+      @include text(48px, 400, 64px);
+      text-align: center;
+      max-width: 830px;
+      margin: 0 auto;
+      @media screen and(max-width:880px) {
+        @include text(34px, 400, 40px);
+      }
+      @media screen and(max-width:600px) {
+        @include text(20px, 400, 30px);
+      }
     }
 
     &-flex {
-    }
-
-    &-order {
+      margin: 30px auto 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &-details {
+      margin-left: 16px;
     }
 
     &-image {
+      margin-top: 94px;
+      max-width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      @media screen and(max-width:880px) {
+        margin-top: 40px;
+      }
     }
 
     &-cars {
+      margin-top: 36px;
+      max-width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      @media screen and(max-width:880px) {
+        margin-top: 16px;
+      }
     }
   }
 }
