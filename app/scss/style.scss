@@ -623,6 +623,67 @@ li {
   }
 }
 
+// reliability
+
+.reliability {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+
+  &__title {
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -25px;
+      right: -30px;
+      width: 42.13px;
+      height: 40.28px;
+      background: url('../img/reliability.jpg') no-repeat center;
+    }
+  }
+
+  &__subtitle {
+    max-width: 857px;
+    margin: 18px auto 0 auto;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    @media screen and(max-width:700px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.33333%;
+    margin: 0;
+    @media screen and(max-width:700px) {
+      margin-top: 40px;
+      max-width: 400px;
+    }
+    &-img {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto;
+    }
+
+    &-title {
+      margin-top: 20px;
+    }
+
+    &-description {
+      margin-top: 11px;
+    }
+  }
+}
 // animations
 
 @keyframes button-dark {
