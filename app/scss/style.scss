@@ -58,7 +58,6 @@ li {
 .container-main {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .button-dark,
@@ -145,11 +144,24 @@ li {
 // header
 .header {
   &__top {
-    padding-top: 30px;
+    width: 100%;
+    position: fixed;
+    padding: 20px 30px 10px 30px;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     column-gap: 20px;
     align-items: center;
+    border-bottom: 1px solid #dadedf;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 3;
+    }
     @media screen and(max-width:1160px) {
       column-gap: 10px;
     }
@@ -159,6 +171,8 @@ li {
     &-logo {
       justify-self: center;
       align-self: center;
+      position: relative;
+      z-index: 3;
       svg {
         @media screen and(max-width:1300px) {
           width: 170px;
@@ -172,6 +186,8 @@ li {
 
     &-list {
       display: flex;
+      position: relative;
+      z-index: 4;
       li {
         margin: 0 11px;
         transition: 0.4s color ease-in-out;
@@ -224,6 +240,8 @@ li {
     }
 
     &-burger {
+      position: relative;
+      z-index: 4;
       display: none;
       margin-right: 10px;
       @media screen and(max-width:880px) {
@@ -276,6 +294,7 @@ li {
 
     &-order {
       justify-self: center;
+      z-index: 3;
       @media screen and(max-width:1060px) {
         display: none;
       }
@@ -865,6 +884,8 @@ li {
 // instruction
 
 .instruction {
+  position: relative;
+  z-index: -1;
   padding-top: 112px;
   @media screen and(max-width:600px) {
     padding-top: 50px;
@@ -1012,6 +1033,7 @@ li {
 .slider {
   margin-top: 60px;
   position: relative;
+  z-index: -1;
   width: 614px;
   height: 516px;
   background-color: #f8f8f9;
@@ -1210,21 +1232,12 @@ li {
     }
   }
 
-  &__logo {
-  }
-
   &__city {
     margin-top: 30px;
   }
 
-  &__address {
-  }
-
   &__mail {
     margin-top: 10px;
-  }
-
-  &__call {
   }
 
   &__facebook {
@@ -1296,8 +1309,16 @@ li {
 @keyframes button-dark {
   0% {
     transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
   }
   100% {
-    transform: translateY(5px);
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
   }
 }
