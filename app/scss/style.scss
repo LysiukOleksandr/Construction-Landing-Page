@@ -1121,6 +1121,56 @@ li {
   }
 }
 
+// connection
+
+.connection {
+  padding-top: 112px;
+  @media screen and(max-width:600px) {
+    padding-top: 50px;
+  }
+  &__wrapper {
+    padding: 120px 10px;
+    background: url('../img/yellow-construction-background.jpg') no-repeat
+      center / cover;
+    @media screen and(max-width:600px) {
+      padding: 50px 10px;
+    }
+  }
+  &__title {
+    max-width: 990px;
+    @include text(48px, 400, 64px);
+    text-align: center;
+    @media screen and(max-width:700px) {
+      @include text(24px, 400, 30px);
+    }
+  }
+
+  &__buttons {
+    margin-top: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and(max-width:400px) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    margin-right: 16px;
+    @media screen and(max-width:400px) {
+      margin: 0;
+      width: 160px;
+    }
+  }
+  &__button-light {
+    width: 207px;
+    @media screen and(max-width:400px) {
+      width: 160px;
+      margin-top: 10px;
+    }
+  }
+}
+
 // animations
 
 @keyframes button-dark {
