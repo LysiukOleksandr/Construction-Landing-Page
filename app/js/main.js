@@ -1,5 +1,5 @@
 // header-menu
-
+new WOW().init()
 
 function headerMenu(){
 
@@ -37,15 +37,13 @@ function slider(){
         item.style.display = 'none';
         item.classList.remove(
       "animate__animated",
-      "animate__fadeOutTopLeft",
-      "animate__fadeInTopRight"
+      "animate__fadeInRight"
     );
       })
       slides[index].style.display = 'block';
       slides[index].classList.add(
         "animate__animated",
-        "animate__fadeOutTopLeft",
-        "animate__delay-2s"
+        "animate__fadeInRight"
       );
     })
   })

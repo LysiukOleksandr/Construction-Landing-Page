@@ -1061,6 +1061,10 @@ li {
     width: 80%;
     height: 80%;
 
+    &--first {
+      display: block;
+    }
+
     &-text {
       @include text(30px, 400, 48px);
     }
