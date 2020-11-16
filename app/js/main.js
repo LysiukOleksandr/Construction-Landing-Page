@@ -23,3 +23,33 @@ function headerMenu(){
 }
 
 headerMenu()
+
+
+function slider(){
+  let slides = document.querySelectorAll('.slider__item');
+  let points = document.querySelectorAll('.slider__pagination-item');
+ 
+  points.forEach((point,index)=>{
+
+    point.addEventListener('click',function(e){
+      e.preventDefault()
+      slides.forEach((item)=>{
+        item.style.display = 'none';
+        item.classList.remove(
+      "animate__animated",
+      "animate__fadeOutTopLeft",
+      "animate__fadeInTopRight"
+    );
+      })
+      slides[index].style.display = 'block';
+      slides[index].classList.add(
+        "animate__animated",
+        "animate__fadeOutTopLeft",
+        "animate__delay-2s"
+      );
+    })
+  })
+
+}
+
+slider()

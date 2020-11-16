@@ -144,6 +144,7 @@ li {
 // header
 .header {
   &__top {
+    z-index: 2;
     width: 100%;
     position: fixed;
     padding: 20px 30px 10px 30px;
@@ -1033,7 +1034,6 @@ li {
 .slider {
   margin-top: 60px;
   position: relative;
-  z-index: -1;
   width: 614px;
   height: 516px;
   background-color: #f8f8f9;
@@ -1055,6 +1055,7 @@ li {
   &__item {
     background: url('../img/quotes.png') no-repeat 5% 5%;
     position: absolute;
+    display: none;
     top: calc(50% - 40%);
     left: calc(50% - 40%);
     width: 80%;
@@ -1091,10 +1092,10 @@ li {
     bottom: 40px;
     display: flex;
     &-item {
-      display: block;
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       margin: 0 4px;
+      cursor: pointer;
       background: $hover;
       border-radius: 50%;
       -webkit-border-radius: 50%;
