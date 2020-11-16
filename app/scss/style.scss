@@ -1035,9 +1035,6 @@ li {
     left: calc(50% - 40%);
     width: 80%;
     height: 80%;
-    border: 1px solid;
-    &-content {
-    }
 
     &-text {
       @include text(30px, 400, 48px);
